@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Photo Design</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/cropperjs/2.0.0-alpha.1/cropper.min.css">
+</head>
+
+<body>
+    <nav>
+        <ul>
+            <li><a href="#"><i>Add Image / Icon</i></a></li>
+        </ul>
+    </nav>
+
+    <div id="container" class="container">
+        <div class="center">Upload Image</div>
+        <div class="center">
+            <Label for="chooseBtn" class="btn">Choose From Device</Label>
+            <input type="file" id="chooseBtn" accept="image/*" onclick="chooseFile()" onchange="changed(event)"
+                style="display: none;">
+        </div>
+    </div>
+
+    <div class="imageDiv">
+        <img src="" alt="" id="previewImg">
+    </div>
+
+    <div class="cropBtnDiv"><button class="btn" id="cropBtn">CROP</button></div>
+
+    <div class="finalImg imageDiv">
+        <img src="" alt="" id="finalImg">
+    </div>
+    <div class="editingTools">
+        <button id="original" onclick="removeAllClass()">Original</button>
+        <button><img src="user_image_frame_1.png" alt="1" id="heart" ></button>
+        <button><img src="user_image_frame_2.png" alt="2" id="square"  ></button>
+        <button><img src="user_image_frame_3.png" alt="3" id="circle" ></button>
+        <button><img src="user_image_frame_4.png" alt="4" id="rectangle" ></button>
+    </div>
+    <button class="UseIt btn">Use It</button>
+
+    <script src="index.js"></script>
+
+    <script type="text/javascript"
+        src="https://cdnjs.cloudflare.com/ajax/libs/cropperjs/2.0.0-alpha.1/cropper.min.js"></script>
+</body>
+
+</html>
